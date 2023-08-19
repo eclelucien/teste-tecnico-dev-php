@@ -1,0 +1,15 @@
+{
+    "name": "eclesiaste/teste-tecnico-dev-php",
+    "autoload": {
+        "psr-4": {
+            "Eclesiaste\\TesteTecnicoDevPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eclesiaste Lucien",
+            "email": "eclesiastelucien@gmail.com"
+        }
+    ],
+    "require": {}
+}
