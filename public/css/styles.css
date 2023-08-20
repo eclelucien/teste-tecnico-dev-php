@@ -4,7 +4,20 @@
 
 #main-title {
     text-align: center;
-    margin: 15px 0 30px;
+    margin: 15px 0 30px; 
+}
+
+.scrollable-container {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center; 
+}
+
+.main-container {
+    padding-bottom: 50px;
+    margin: 0 auto;
 }
 
 footer {
@@ -15,4 +28,22 @@ footer {
 	bottom: 0;
     position: absolute;
     width: 100%;
+}
+
+
+
+
+.main-container {
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    #main-title {
+        margin: 10px 0 20px;
+    }
+    .main-container {
+        padding-bottom: 30px;
+    }
 }

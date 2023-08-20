@@ -17,11 +17,11 @@
             <a class="navbar-brand" href="index.php">
                 <img src="https://www.nicepng.com/png/detail/63-633652_how-to-set-use-blue-person-symbol-svg.png" alt="Agenda">
             </a>
-            <div>
-                <div class="navbar-nav">
-                    <h1> <a class="nav-link active" id="home-link" href="index.php">Lista de clientes</a></h1>
-                    <button type="button" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
+            <div class="d-flex align-items-center">
+                <div class="navbar-nav mx-auto">
+                    <h1 class="m-0"><a class="nav-link active" id="home-link" href="index.php">Lista de clientes</a></h1>
                 </div>
+                <button type="button" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
             </div>
         </nav>
     </header>

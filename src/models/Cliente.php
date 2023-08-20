@@ -13,7 +13,7 @@ class Cliente extends Database{
     public $registered;
     public string $phone;
     public string $cell;
-    public  $picture;
+    public $picture;
     public string $nat;
 
     public function findAll()
