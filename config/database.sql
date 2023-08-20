@@ -1,5 +1,4 @@
 
-
 create table clientes(
     id int(11) AUTO_INCREMENT PRIMARY KEY,
     gender varchar(50) not null,
@@ -11,15 +10,14 @@ create table clientes(
     registered JSON,
     phone varchar(50) not null,
     cell varchar(50) not null,
-    id JSON,
     picture JSON,
     nat varchar(50) not null,
+    FOREIGN KEY (location_id) REFERENCES location (id)
 );
 
 create table  locations(
     id int(11) AUTO_INCREMENT PRIMARY KEY,
     street JSON,
-    user_id,
     city varchar(50) not null,
     state varchar(50) not null,
     country varchar(50) not null,

@@ -9,7 +9,7 @@ class Database {
     public $pdo;
 
     public function __construct() {
-        $dsn = "pgsql:host=$this->host;dbname=$this->database";
+        $dsn = "mysql:host=$this->host;dbname=$this->database";
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ];
