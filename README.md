@@ -36,10 +36,8 @@ sudo docker ps
 
 Para acessar o seu container, utilize o seguinte comando substituindo [ID DO Container do projeto] pelo ID do container apropriado:
 
-```bash
 sudo docker ps
     
-```bash
 sudo docker exec -it [ID DO Container do projeto] bash
 
 Dentro do bash, para criar as tabelas do banco de dados, execute:
