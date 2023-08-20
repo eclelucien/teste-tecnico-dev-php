@@ -45,9 +45,9 @@ Dentro do bash, para criar as tabelas do banco de dados, execute:
     php src/install.php
 
 
-    Finalmente, acesse o projeto em seu navegador:
+Finalmente, acesse o projeto em seu navegador:
 
-    http://localhost:8008/
+http://localhost:8008/
 
 
 Consumo da API e Armazenamento em Banco de Dados
