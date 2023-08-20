@@ -20,7 +20,7 @@
             <div>
                 <div class="navbar-nav">
                     <h1> <a class="nav-link active" id="home-link" href="index.php">Lista de clientes</a></h1>
-                    <button type="button" onclick="">Mais clientes...</button>
+                    <button type="button" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
                 </div>
             </div>
         </nav>
