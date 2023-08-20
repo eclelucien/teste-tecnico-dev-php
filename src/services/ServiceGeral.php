@@ -9,10 +9,10 @@ use PDO;
 class ServiceGeral extends Database {
    
     public function getClients() {
+        var_dump("ANMWEEEEEEEEEEEE");
         $helper = new Helper();
         $response = $helper->callApi();
         $data = json_decode($response, true);
-
         foreach ($data['results'] as $user) {
             $exists = $this->clientExistsByEmail($user['email']);
             var_dump($exists);

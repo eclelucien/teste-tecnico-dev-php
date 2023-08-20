@@ -1,3 +1,15 @@
+<?php
+
+use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
+ if (isset($_POST['moreClients'])) {
+    $service = new ServiceGeral();
+    $service->getClients();
+    header("location:index.php");
+ }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +33,9 @@
                 <div class="navbar-nav mx-auto">
                     <h1 class="m-0"><a class="nav-link active" id="home-link" href="index.php">Lista de clientes</a></h1>
                 </div>
-                <button type="button" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
+                <form action="" method="post">
+                    <button type="submit" name="moreClients" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
+                </form>
             </div>
         </nav>
     </header>

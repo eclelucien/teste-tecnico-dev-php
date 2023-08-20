@@ -6,14 +6,14 @@ class Location extends Database{
     
     protected $table = 'locations';
 
-    public int $id;
-    public  $street;
-    public string $city;
-    public int $state;
-    public string $country;
-    public int $postcode;
-    public $coordinates;
-    public $timezone;
+    private int $id;
+    private  $street;
+    private string $city;
+    private int $state;
+    private string $country;
+    private int $postcode;
+    private $coordinates;
+    private $timezone;
 
     public function findById($id)
     {
