@@ -1,6 +1,6 @@
 <?php
 
-class Cliente {
+class Cliente extends Database{
     protected $table = 'clientes';
 
     public int $id;
@@ -16,5 +16,10 @@ class Cliente {
     public  $picture;
     public string $nat;
 
+    public function findAll()
+    {
+        $stmt = $this->pdo->query("SELECT * FROM $this->table");
+        return $stmt->fetchAll();
+    }
 
 }
