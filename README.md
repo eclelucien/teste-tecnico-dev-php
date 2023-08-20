@@ -30,23 +30,24 @@ Este é um projeto de teste técnico em PHP que consiste em criar uma aplicaçã
 
 Para verificar os containers em execução, digite:
 
-```bash
-sudo docker ps
+    ```bash
+    sudo docker ps
 
 
 Para acessar o seu container, utilize o seguinte comando substituindo [ID DO Container do projeto] pelo ID do container apropriado:
 
-sudo docker ps
-    
-sudo docker exec -it [ID DO Container do projeto] bash
+    ```bash
+    sudo docker exec -it [ID DO Container do projeto] bash
+
 
 Dentro do bash, para criar as tabelas do banco de dados, execute:
-php src/install.php
+    ```bash
+    php src/install.php
 
 
-Finalmente, acesse o projeto em seu navegador:
+    Finalmente, acesse o projeto em seu navegador:
 
-http://localhost:8008/
+    http://localhost:8008/
 
 
 Consumo da API e Armazenamento em Banco de Dados
@@ -65,5 +66,6 @@ O código HTML, CSS e JavaScript para a página web está disponível nos seguin
 public/index.html: Página principal que exibe os dados dos clientes e o botão de sincronização.
 public/styles.css: Arquivo CSS para estilização da página.
 public/script.js: Arquivo JavaScript para a interatividade da página.
+
 Documentação Adicional
 Para mais detalhes sobre o funcionamento interno da aplicação, o processo de consumo da API, o tratamento dos dados e a estruturação do banco de dados, você pode conferir o código-fonte e os comentários nos arquivos mencionados acima. A estruturação do banco de dados, bem como a relação entre as tabelas, está planejada de forma eficiente para permitir consultas relacionais e otimizadas.
