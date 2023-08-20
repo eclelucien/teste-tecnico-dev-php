@@ -1,5 +1,7 @@
 <?php
 
+use Eclesiaste\TesteTecnicoDevPhp\config\Database;
+
 class Cliente extends Database{
     protected $table = 'clientes';
 

@@ -1,5 +1,10 @@
 <?php
 
+namespace Eclesiaste\TesteTecnicoDevPhp\config;
+
+use PDO;
+use PDOException;
+
 class Database {
     
     private $host = "localhost";
@@ -25,7 +30,7 @@ class Database {
     }
 
     public function createTables() {
-        $sqlFile = 'config/database.sql';
+        $sqlFile = 'src/config/database.sql';
         if (file_exists($sqlFile)) {
             $sql = file_get_contents($sqlFile);
             $this->pdo->exec($sql);

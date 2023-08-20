@@ -1,6 +1,10 @@
-<?php 
-    include_once("src/templates/header.php");
-    require_once 'config/Database.php';
+<?php
+
+    require_once 'vendor/autoload.php';
+    include('./src/templates/header.php');
+
+    use Eclesiaste\TesteTecnicoDevPhp\config\Database;
+    
     $db = new Database();
     $query = "SELECT c.*, l.* FROM clientes c
               LEFT JOIN locations l ON c.location_id = l.id";

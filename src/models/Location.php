@@ -1,5 +1,7 @@
 <?php
 
+use Eclesiaste\TesteTecnicoDevPhp\config\Database;
+
 class Location extends Database{
     
     protected $table = 'locations';
