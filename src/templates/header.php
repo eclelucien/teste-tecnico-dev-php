@@ -25,16 +25,16 @@ use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar">
             <a class="navbar-brand" href="index.php">
                 <img src="https://www.nicepng.com/png/detail/63-633652_how-to-set-use-blue-person-symbol-svg.png" alt="Agenda">
             </a>
-            <div class="d-flex align-items-center">
-                <div class="navbar-nav mx-auto">
-                    <h1 class="m-0"><a class="nav-link active" id="home-link" href="index.php">Lista de clientes</a></h1>
+            <div class="d-flex align-items-center flex-column justify-content-center">
+                <div class="navbar-nav">
+                    <h1 class="m-0"><a class="nav-link text-white active" id="home-link" href="index.php">Lista de clientes</a></h1>
                 </div>
                 <form action="" method="post">
-                    <button type="submit" name="moreClients" class="btn btn-sm btn-light" id="mais-clientes-button" style="height: 30px;">Mais clientes...</button>
+                    <button type="submit" name="moreClients" class="btn btn-sm btn-light" id="mais-clientes-button">Mais clientes...</button>
                 </form>
             </div>
         </nav>

@@ -14,11 +14,12 @@ class ServiceGeral extends Database {
         $data = json_decode($response, true);
         foreach ($data['results'] as $user) {
             $exists = $this->clientExistsByEmail($user['email']);
-            var_dump($exists);
             if (!$exists) {
                 $this->insertIntoDatabase($user);
+                return true;
             }
         }
+        return false;
     }
 
     private function insertIntoDatabase($user) {
