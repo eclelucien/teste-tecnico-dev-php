@@ -39,7 +39,7 @@ sudo docker ps
     ```bash
     sudo docker ps
         
-    `
+    ```bash
     sudo docker exec -it [ID DO Container do projeto] bash
 
     Dentro do bash, para criar as tabelas do banco de dados, execute:
