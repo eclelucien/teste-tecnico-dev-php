@@ -1,5 +1,4 @@
 
-drop table if exists locations;
 
 create table clientes(
     id int(11) AUTO_INCREMENT PRIMARY KEY,
