@@ -7,7 +7,6 @@ use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
     header("location:index.php");
  }
 
-
 ?>
 
 <!DOCTYPE html>

@@ -1,9 +1,8 @@
 <?php
 
-namespace Eclesiaste\TesteTecnicoDevPhp\Tests\helpers;
+namespace Eclesiaste\TesteTecnicoDevPhp\test\helpers;
 
 use Eclesiaste\TesteTecnicoDevPhp\helpers\Helper;
-use Eclesiaste\TesteTecnicoDevPhp\Tests\mocks\HelperMock;
 use PHPUnit\Framework\TestCase;
 
 
