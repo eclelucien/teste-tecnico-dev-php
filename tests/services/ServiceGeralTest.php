@@ -2,10 +2,9 @@
 
 namespace Eclesiaste\TesteTecnicoDevPhp\test\services;
 
-use Eclesiaste\TesteTecnicoDevPhp\helpers\Helper;
-use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
-use Eclesiaste\TesteTecnicoDevPhp\test\helpers\HelperTest;
-use PDO;
+use Eclesiaste\TesteTecnicoDevPhp\models\Cliente;
+use Eclesiaste\TesteTecnicoDevPhp\models\Location;
+use Eclesiaste\TesteTecnicoDevPhp\services\UserManagement;
 use PHPUnit\Framework\TestCase;
 
 
@@ -73,21 +72,24 @@ class ServiceGeralTest extends TestCase{
     public function testClientWhenItExistsByEmail() {
         $email = 'test@example.com';
       
-        $serviceGeralMock = $this->getMockBuilder(ServiceGeral::class)
+        $userManagement = $this->getMockBuilder(UserManagement::class)
         ->getMock();
 
-        $serviceGeralMock->expects($this->any())
-                ->method('getbyEmail')
+        $client = $this->getMockBuilder(Cliente::class)
+        ->getMock();
+
+        $client->expects($this->any())
+                ->method('getByEmail')
                 ->with($email)
                 ->willReturn(1); 
 
-        $serviceGeralMock->expects($this->any())
+        $userManagement->expects($this->any())
                 ->method('clientExistsByEmail')
                 ->with($email)
                 ->willReturn(true); 
 
 
-        $result = $serviceGeralMock->clientExistsByEmail($email);
+        $result = $userManagement->clientExistsByEmail($email);
 
         $this->assertTrue($result);
     }
@@ -95,45 +97,54 @@ class ServiceGeralTest extends TestCase{
     public function testClientWhenNotExistsByEmail() {
         $email = 'test@example.com';
       
-        $serviceGeralMock = $this->getMockBuilder(ServiceGeral::class)
+        $userManagement = $this->getMockBuilder(UserManagement::class)
         ->getMock();
 
-        $serviceGeralMock->expects($this->any())
-                ->method('getbyEmail')
+        $client = $this->getMockBuilder(Cliente::class)
+        ->getMock();
+
+        $client->expects($this->any())
+                ->method('getByEmail')
                 ->with($email)
                 ->willReturn(0); 
 
-        $serviceGeralMock->expects($this->any())
+        $userManagement->expects($this->any())
                 ->method('clientExistsByEmail')
                 ->with($email)
                 ->willReturn(false); 
 
 
-        $result = $serviceGeralMock->clientExistsByEmail($email);
+        $result = $userManagement->clientExistsByEmail($email);
 
         $this->assertFalse($result);
     }
 
     public function testInsertIntoDatabase(){
-        $serviceGeralMock = $this->getMockBuilder(ServiceGeral::class)
+        $userManagement = $this->getMockBuilder(UserManagement::class)
         ->getMock();
 
-        $serviceGeralMock->expects($this->any())
+        $client = $this->getMockBuilder(Cliente::class)
+        ->getMock();
+
+        $location = $this->getMockBuilder(Location::class)
+        ->getMock();
+
+        $location->expects($this->any())
         ->method('insertLocation')
         ->with(self::user()['location'])
         ->willReturn(1); 
 
-        $serviceGeralMock->expects($this->any())
+        $client->expects($this->any())
         ->method('insertClient')
         ->with(self::user(), 1)
         ->willReturn(0); 
 
-        $serviceGeralMock->expects($this->any())
+        $userManagement->expects($this->any())
         ->method('insertIntoDatabase')
         ->with(self::user())
         ->willReturn(true); 
 
-        $result = $serviceGeralMock->insertIntoDatabase(self::user());
+        $result = $userManagement->insertIntoDatabase(self::user());
 
          $this->assertTrue($result);
     }

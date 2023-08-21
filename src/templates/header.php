@@ -1,8 +1,8 @@
 <?php
 
-use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
+use Eclesiaste\TesteTecnicoDevPhp\services\UserManagement;
  if (isset($_POST['moreClients'])) {
-    $service = new ServiceGeral();
+    $service = new UserManagement();
     $service->getClients();
     header("location:index.php");
  }

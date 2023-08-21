@@ -4,14 +4,14 @@ require_once 'vendor/autoload.php';
 
 
 use Eclesiaste\TesteTecnicoDevPhp\config\Database;
-use Eclesiaste\TesteTecnicoDevPhp\services\ServiceGeral;
+use Eclesiaste\TesteTecnicoDevPhp\services\UserManagement;
 use Exception;
 
 // class Installation{
 //     public function execute(){
 //         try {
 //             $db = new Database();
-//             $service = new ServiceGeral();
+//             $service = new UserManagement();
 //             $db->createTables();
 //             $service->getClients();
 //             echo "Sucesso: banco de dados criado. \n";
@@ -27,7 +27,7 @@ use Exception;
 
 try {
     $db = new Database();
-    $service = new ServiceGeral();
+    $service = new UserManagement();
     $db->createTables();
     $service->getClients();
 
