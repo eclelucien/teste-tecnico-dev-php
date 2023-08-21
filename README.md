@@ -26,28 +26,27 @@ Este é um projeto de teste técnico em PHP que consiste em criar uma aplicaçã
 3. Abra um terminal na pasta do projeto e execute o seguinte comando para iniciar os containers e fazer o build do projeto:
 
    ```
-   sudo docker-compose up --build
+    sudo docker-compose up --build
    ```
 
 Para verificar os containers em execução, digite:
 
-    ```
+   ```
     sudo docker ps
-    ```
+   ```
 
 
 Para acessar o seu container, utilize o seguinte comando substituindo [ID DO Container do projeto] pelo ID do container apropriado:
 
-    ```
+   ```
     sudo docker exec -it [ID DO Container do projeto] bash
-    ```
+   ```
 
 Dentro do bash, para criar as tabelas do banco de dados, execute:
 
-    ```
+   ```
     php src/install.php
-    ```
-
+   ```
 
 Finalmente, acesse o projeto em seu navegador:
 
@@ -60,16 +59,21 @@ A aplicação PHP consome a API https://randomuser.me/ para obter dados de usuá
 O código para o consumo da API, tratamento de dados e armazenamento no banco de dados está disponível nos seguintes arquivos:
 
 src/helpers/Helper.php: Classe responsável por realizar a chamada à API e tratar os dados.
-src/helpers/Config.php: Classe que gerencia a conexão com o banco de dados usando PDO.
-src/app/ClientRepository.php: Classe para interagir com a tabela "cliente" no banco de dados.
+
+src/services/UserManagement.php: Classe que gerencia a conexão com o banco de dados usando PDO.
+
+src/models/Cliente.php: Classe para interagir com a tabela "cliente"s no banco de dados.
+
+src/models/Location.php: Classe para interagir com a tabela "locations" no banco de dados.
+
+
 Página Web de Visualização e Sincronização
 A página web construída exibe os dados dos clientes de forma clara e organizada. Ela também inclui um botão de sincronização que permite obter novos dados da API e atualizar a tabela "cliente" no banco de dados.
 
-O código HTML, CSS e JavaScript para a página web está disponível nos seguintes arquivos:
+O código HTML, CSS e php para a página web está disponível nos seguintes arquivos:
 
-public/index.html: Página principal que exibe os dados dos clientes e o botão de sincronização.
+index.html: Página principal que exibe os dados dos clientes e o botão de sincronização.
 public/styles.css: Arquivo CSS para estilização da página.
-public/script.js: Arquivo JavaScript para a interatividade da página.
 
 Documentação Adicional
-Para mais detalhes sobre o funcionamento interno da aplicação, o processo de consumo da API, o tratamento dos dados e a estruturação do banco de dados, você pode conferir o código-fonte e os comentários nos arquivos mencionados acima. A estruturação do banco de dados, bem como a relação entre as tabelas, está planejada de forma eficiente para permitir consultas relacionais e otimizadas.
+Para mais detalhes sobre o funcionamento interno da aplicação, o processo de consumo da API, o tratamento dos dados e a estruturação do banco de dados, você pode conferir o código-fonte e os comentários nos arquivos mencionados acima. 
