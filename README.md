@@ -25,24 +25,28 @@ Este é um projeto de teste técnico em PHP que consiste em criar uma aplicaçã
 2. Clone este repositório para o seu ambiente local.
 3. Abra um terminal na pasta do projeto e execute o seguinte comando para iniciar os containers e fazer o build do projeto:
 
-   ```bash
+   ```
    sudo docker-compose up --build
+   ```
 
 Para verificar os containers em execução, digite:
 
-    ```bash
+    ```
     sudo docker ps
+    ```
 
 
 Para acessar o seu container, utilize o seguinte comando substituindo [ID DO Container do projeto] pelo ID do container apropriado:
 
-    ```bash
+    ```
     sudo docker exec -it [ID DO Container do projeto] bash
-
+    ```
 
 Dentro do bash, para criar as tabelas do banco de dados, execute:
-    ```bash
+
+    ```
     php src/install.php
+    ```
 
 
 Finalmente, acesse o projeto em seu navegador:
