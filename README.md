@@ -4,6 +4,7 @@ Teste técnico de dev php
 # Teste Técnico PHP: Consumo de API e Armazenamento em Banco de Dados
 
 Este é um projeto de teste técnico em PHP que consiste em criar uma aplicação capaz de consumir dados da API pública [https://randomuser.me/](https://randomuser.me/) e armazená-los em um banco de dados MariaDB. Além disso, uma página web é construída para exibir os dados dos clientes de forma organizada. A aplicação é executada em um ambiente Docker para facilitar a configuração e execução.
+![Screenshot from 2023-08-20 22-24-53](https://github.com/eclelucien/teste-tecnico-dev-php/assets/56320433/f7831d2b-0101-4d22-a91c-4d2ce7bfc2e8)
 
 ## Funcionalidades
 
@@ -23,7 +24,13 @@ Este é um projeto de teste técnico em PHP que consiste em criar uma aplicaçã
 
 1. Certifique-se de ter o Docker instalado em sua máquina.
 2. Clone este repositório para o seu ambiente local.
-3. Abra um terminal na pasta do projeto e execute o seguinte comando para iniciar os containers e fazer o build do projeto:
+3. Abra um terminal na pasta do projeto e execute o seguinte comando para installar as dependencias:
+
+   ```
+    composer install
+   ```
+
+4. Execute o seguinte comando para iniciar os containers e fazer o build do projeto:
 
    ```
     sudo docker-compose up --build
