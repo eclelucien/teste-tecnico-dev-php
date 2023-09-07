@@ -68,5 +68,4 @@ class Cliente extends Database{
         $stmt->execute();
         return $stmt->fetchColumn();
     }
-
 }

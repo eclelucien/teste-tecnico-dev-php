@@ -43,7 +43,6 @@ class Location extends Database{
             $postcode = $location['postcode'];
             $coordinates = !is_null($location['coordinates']) ? json_encode($location['coordinates']) : null;
             $timezone = !is_null($location['timezone']) ? json_encode($location['timezone']) : null;
-        
             $locationSql = "INSERT INTO locations (street, city, state, country, postcode, coordinates, timezone) 
                             VALUES (:street, :city, :state, :country, :postcode, :coordinates, :timezone)";
             $locationStmt = $this->pdo->prepare($locationSql);
